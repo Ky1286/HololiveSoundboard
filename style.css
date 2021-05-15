@@ -1,5 +1,21 @@
 body {
-    background-image: "images/holobackground.png";
-    opacity: 0.6;
+    background-image: "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/1369026/973248_693363.png";
 }   
 
+.summer {
+    background-color: orange;
+    color: rgb(156, 90, 35);
+    font-size: x-large;
+}
+
+.oni {
+    background-color: rgb(235, 44, 44);
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+}
+
+.fox {
+    background-color: rgb(97, 245, 245);
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+}
