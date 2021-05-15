@@ -1,4 +1,4 @@
-# ky1286.github.io
+# Hololive Soundboard Ver. 1.0.0
 
 The purpose of this project is to create a soundboard from soundbites of Hololive members.
 
