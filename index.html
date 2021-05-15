@@ -30,9 +30,27 @@
 			<div class="oni">
 			<h1><img src="ayamebanner.png" class="img-responsive" alt="Nakiri Ayame"></h1>
 			</div>
-				<button type="button" class="btn btn-default">Button 1</button>
-				<button type="button" class="btn btn-default">Button 2</button>
-				<button type="button" class="btn btn-default">Button 3</button>
+				<button type="button" id="why" class="btn btn-default">why</button>
+				<audio id="ayame_why" src="sounds/ayame_why.mp3"></audio>
+				<script>
+				  $('#why').on('click', function () {
+					document.getElementById("ayame_why").play();
+				  })
+				</script>
+				<button type="button" id="sneeze" class="btn btn-default">sneeze</button>
+				<audio id="ayame_sneeze" src="sounds/ayame_sneeze.mp3"></audio>
+				<script>
+				  $('#sneeze').on('click', function () {
+					document.getElementById("ayame_sneeze").play();
+				  })
+				</script>
+				<button type="button" id="ily" class="btn btn-default">I love you!</button>
+				<audio id="ayame_ily" src="sounds/ayame_i_love_you.mp3"></audio>
+				<script>
+				  $('#ily').on('click', function () {
+					document.getElementById("ayame_ily").play();
+				  })
+				</script>
 				<button type="button" class="btn btn-default">Button 4</button>
 				<button type="button" class="btn btn-default">Button 5</button>
 				<button type="button" class="btn btn-default">Button 6</button>
