@@ -1,78 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Matsuri Soundboard</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<script src="noise.js"></script>
-    </head>
-    <body>
-		<div class="col-md-4">
-			<div class="summer">
-			<h1><img src="matsuribanner.png" class="img-responsive" alt="Natsuiro Matsuri"></h1>
-			</div>
-				<button type="button" class="btn btn-default" onclick="scream()">aaaAAaaa</button>
-				<audio id="yelling" src="sounds/matsuriScream.wav"></audio>
-				<button type="button" class="btn btn-default">Button 2</button>
-				<button type="button" class="btn btn-default">Button 3</button>
-				<button type="button" class="btn btn-default">Button 4</button>
-				<button type="button" class="btn btn-default">Button 5</button>
-				<button type="button" class="btn btn-default">Button 6</button>
-				<button type="button" class="btn btn-default">Button 7</button>
-				<button type="button" class="btn btn-default">Button 8</button>
-				<button type="button" class="btn btn-default">Button 9</button>
-				<button type="button" class="btn btn-default">Button 10</button>
-		</div>
-		<div class="col-md-4">
-			<div class="oni">
-			<h1><img src="ayamebanner.png" class="img-responsive" alt="Nakiri Ayame"></h1>
-			</div>
-				<button type="button" id="why" class="btn btn-default">why</button>
-				<audio id="ayame_why" src="sounds/ayame_why.mp3"></audio>
-				<script>
-				  $('#why').on('click', function () {
-					document.getElementById("ayame_why").play();
-				  })
-				</script>
-				<button type="button" id="sneeze" class="btn btn-default">sneeze</button>
-				<audio id="ayame_sneeze" src="sounds/ayame_sneeze.mp3"></audio>
-				<script>
-				  $('#sneeze').on('click', function () {
-					document.getElementById("ayame_sneeze").play();
-				  })
-				</script>
-				<button type="button" id="ily" class="btn btn-default">I love you!</button>
-				<audio id="ayame_ily" src="sounds/ayame_i_love_you.mp3"></audio>
-				<script>
-				  $('#ily').on('click', function () {
-					document.getElementById("ayame_ily").play();
-				  })
-				</script>
-				<button type="button" class="btn btn-default">Button 4</button>
-				<button type="button" class="btn btn-default">Button 5</button>
-				<button type="button" class="btn btn-default">Button 6</button>
-				<button type="button" class="btn btn-default">Button 7</button>
-				<button type="button" class="btn btn-default">Button 8</button>
-				<button type="button" class="btn btn-default">Button 9</button>
-				<button type="button" class="btn btn-default">Button 10</button>
-			</div>
-		<div class="col-md-4">
-			<div class="fox">
-			<h1><img src="fubukibanner.png" class="img-responsive" alt="Shirakami Fubuki"></h1>
-			</div>
-				<button type="button" class="btn btn-default">Button 1</button>
-				<button type="button" class="btn btn-default">Button 2</button>
-				<button type="button" class="btn btn-default">Button 3</button>
-				<button type="button" class="btn btn-default">Button 4</button>
-				<button type="button" class="btn btn-default">Button 5</button>
-				<button type="button" class="btn btn-default">Button 6</button>
-				<button type="button" class="btn btn-default">Button 7</button>
-				<button type="button" class="btn btn-default">Button 8</button>
-				<button type="button" class="btn btn-default">Button 9</button>
-				<button type="button" class="btn btn-default">Button 10</button>
-		</div>
-    </body>
-</html> 
+   <head>
+      <title>Matsuri Soundboard</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+	var DEBUG_MESSAGES = false;
+	$(document).ready(function() {
+	  $("button").click(function() {
+	    var audioName = $(this).data("audio");
+	    // if the data-audio property exists, play audio
+	    if (audioName != null) {
+	      if (DEBUG_MESSAGES) {
+		console.log("Playing: " + audioName);
+	      }
+	      var audio = new Audio(audioName);
+	      audio.play();
+	    }
+	  });
+	}); 
+      </script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="col-md-4">
+            <div class="summer">
+               <h1><img src="matsuribanner.png" class="img-responsive" alt="Natsuiro Matsuri"></h1>
+            </div>
+            <button type="button" class="btn btn-default" data-audio="sounds/matsuriScream.wav">aaaAAaaa</button>
+            <button type="button" class="btn btn-default">Button 2</button>
+            <button type="button" class="btn btn-default">Button 3</button>
+            <button type="button" class="btn btn-default">Button 4</button>
+            <button type="button" class="btn btn-default">Button 5</button>
+            <button type="button" class="btn btn-default">Button 6</button>
+            <button type="button" class="btn btn-default">Button 7</button>
+            <button type="button" class="btn btn-default">Button 8</button>
+            <button type="button" class="btn btn-default">Button 9</button>
+            <button type="button" class="btn btn-default">Button 10</button>
+         </div>
+         <div class="col-md-4">
+            <div class="oni">
+               <h1><img src="ayamebanner.png" class="img-responsive" alt="Nakiri Ayame"></h1>
+            </div>
+            <button type="button" class="btn btn-default" data-audio="sounds/ayame_why.mp3">why</button>
+            <button type="button" class="btn btn-default" data-audio="sounds/ayame_sneeze.mp3">sneeze</button>
+            <button type="button" class="btn btn-default" data-audio="sounds/ayame_i_love_you.mp3">I love you!</button>
+            <button type="button" class="btn btn-default">Button 4</button>
+            <button type="button" class="btn btn-default">Button 5</button>
+            <button type="button" class="btn btn-default">Button 6</button>
+            <button type="button" class="btn btn-default">Button 7</button>
+            <button type="button" class="btn btn-default">Button 8</button>
+            <button type="button" class="btn btn-default">Button 9</button>
+            <button type="button" class="btn btn-default">Button 10</button>
+         </div>
+         <div class="col-md-4">
+            <div class="fox">
+               <h1><img src="fubukibanner.png" class="img-responsive" alt="Shirakami Fubuki"></h1>
+            </div>
+            <button type="button" class="btn btn-default">Button 1</button>
+            <button type="button" class="btn btn-default">Button 2</button>
+            <button type="button" class="btn btn-default">Button 3</button>
+            <button type="button" class="btn btn-default">Button 4</button>
+            <button type="button" class="btn btn-default">Button 5</button>
+            <button type="button" class="btn btn-default">Button 6</button>
+            <button type="button" class="btn btn-default">Button 7</button>
+            <button type="button" class="btn btn-default">Button 8</button>
+            <button type="button" class="btn btn-default">Button 9</button>
+            <button type="button" class="btn btn-default">Button 10</button>
+         </div>
+      </div>
+   </body>
+</html>
